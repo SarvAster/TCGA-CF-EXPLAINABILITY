@@ -1,1 +1,6 @@
 # TCGA-CF-EXPLAINABILITY
+This github presents a work on counterfactual explainability of the TCGA, applying the method provided by DICE and a brute force generation method. There is a paper explaining in details the methods and results, and a notebook containing the 5 main scripts with the DICE algorithm, the post-hoc sparsity algorithm, the evaluation script, and two BF scoring algorithms, for varrying 1 and 2 features.
+
+The anaysis globally shows that it is very hard to obtain sparse and plausible counterfactuals at the same time with these methods, and though it is a general tradeoff, there is still to see how generative deeplearning methods like GANs perform against it. As features are very correlated in the dataset while it does not outline or contain interdependence and correlation relations, it is also hard to obtain very sparse outputs, nor increase sparsity based on these relations. Also, drugs acting on genes and transcriptions are only known to influence a few features (1,2 or 3 max), our framework of study does not permit to find actionnable solutions.
+
+Other random fact : it should also be outlined that genes influencing different cancers do not have a big overlap, while we don't know how the data is spatially distributed.
